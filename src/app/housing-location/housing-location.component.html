@@ -1,0 +1,12 @@
+<!-- <div class="row">-->
+<div class="col-3"> 
+    <div class="card">
+         <img class="card-img-top" [src]="housingLocation.photo" alt="Card image {{housingLocation.photo}}">
+        <div class="card-body">
+            <h4 class="card-title">{{housingLocation.name}} </h4>
+            <p class="card-text"> {{housingLocation.city}} | {{housingLocation.state}} </p>
+            <a [routerLink]="[ '/details',housingLocation.id]" class="btn btn-primary">See More</a>
+        </div>
+    </div>
+</div>
+<!-- </div> -->

@@ -1,0 +1,35 @@
+<section class="w-25">
+    <form>
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search" #filter>
+            <button class="btn btn-success" type="button" (click)="filterResults(filter.value)">Go</button>
+        </div>
+    </form>
+</section>
+
+<section>
+    <div class="row">
+
+        <!-- <app-housing-location  *ngFor="let housingLocation of housingLocationList" [housingLocation] = "housingLocation"></app-housing-location> -->
+        <app-housing-location *ngFor="let housingLocation of filteredLocationList"
+            [housingLocation]="housingLocation"></app-housing-location>
+    </div>
+
+</section>
+
+
+<!-- <div class="row">
+    <div class="col-3" *ngFor="let housingLocation of housingLocationList">
+        <div class="card">
+    
+            <img class="card-img-top" [src]="housingLocation.photo" alt="Card image {{housingLocation.photo}}">
+            <div class="card-body">
+                <h4 class="card-title">{{housingLocation.name}} </h4>
+                <p class="card-text"> {{housingLocation.city}} | {{housingLocation.state}} </p>
+                
+            </div>
+        </div>
+    </div>
+    </div> -->
+

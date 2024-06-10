@@ -1,0 +1,36 @@
+<p>housing-details works!  {{housingLocation?.id}} </p>
+<div class="row">
+    <div class="col-6">
+        <article>
+
+
+            <img [src]="housingLocation?.photo">
+        
+        
+            <p> {{housingLocation?.id  }}</p>  
+            <p> {{housingLocation?.name  }}</p>  
+            <p> {{housingLocation?.city  }}</p>  
+            <p> {{housingLocation?.state  }}</p>  
+            <p> {{housingLocation?.photo  }}</p>  
+            <p> {{housingLocation?.availableUnits  }}</p>  
+            <p> {{housingLocation?.wifi  }}</p>  
+            <p> {{housingLocation?.laundry  }}</p>  
+        
+    
+        </article>
+    </div>
+    <div class="col-6">
+        <p>Reactive Form</p>
+        <form [formGroup]="applyForm" (submit)="submitApplication()">
+        <!-- <input type="text" placeholder="Enter firstName" formControlName="firstName" > -->
+        <!-- <input type="text" placeholder="Enter lastName" formControlName="lastName" > -->
+        
+        <input type="text" placeholder="Enter email" formControlName="firstName" >
+        <input type="text" placeholder="Enter email" formControlName="lastName" >
+        <input type="text" placeholder="Enter email" formControlName="email" >
+        
+        <button type="submit">Apply Now</button>
+        </form>
+    </div>
+</div>
+
